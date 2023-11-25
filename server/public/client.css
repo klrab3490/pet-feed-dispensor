@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    color: aliceblue;
+    background-color: #1d1e22;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+  .item {
+    background-color: #252526;
+    float:left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin:10px;
+    width: 200px;
+    height: 250px;
+  }
+  
+  .item h2 {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .item img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .item img:hover {
+    cursor: pointer;
+  }
+
+  .command-button {
+    width: 30px;
+    height: 30px;
+    background-color: #333333;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    float: left;
+  }
+
+  .on-off-icon {
+    content: url(icons/power-on.svg);
+    width: 20px;
+  }
+  
+  .on-off-icon:hover {
+    filter: brightness(150%) drop-shadow(0 0 10px yellow);
+  }
+  
+  .on-off-icon[data-state="0"] {
+    filter: invert(6%) sepia(6%) saturate(21%) hue-rotate(316deg) brightness(92%) contrast(86%);
+  }
+  
+  .on-off-icon[data-state="1"] {
+    filter: invert(47%) sepia(84%) saturate(1994%) hue-rotate(82deg) brightness(107%) contrast(109%);
+  }
+  
+  .on-off-icon[data-state="1"]:hover {
+    text-shadow: 0 0 10px yellow;
+  }
+
+  .content {
+    padding: 20px;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+  
+  input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  form{
+    border-radius: 5px;
+    background-color: #ffd1d1;
+    padding: 20px;
+  }
+  
+  button {
+    background-color: #21b555;
+    border: none;
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+      background-color: #1282A2;
+  }
+  
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+    }
+  
+  input[type="radio"]:checked{
+    border: 6px solid #de1010;
+  }
+  
+  #motor-state{
+    font-weight: bold;
+    color: red;
+  }
+  
+  #arrow_icon{
+    font-size:100px;
+    color:#1280a2;
+  }
+  
+  .spin {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+  }
+  
+  .spin-back {
+    -webkit-animation:spin-back 4s linear infinite;
+    -moz-animation:spin-back 4s linear infinite;
+    animation:spin-back 4s linear infinite;
+  }
+  
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+  
+  @-moz-keyframes spin-back { 100% { -moz-transform: rotate(-360deg); } }
+  @-webkit-keyframes spin-back { 100% { -webkit-transform: rotate(-360deg); } }
+  @keyframes spin-back { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
