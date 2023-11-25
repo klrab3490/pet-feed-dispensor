@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws:///192.168.58.28:8999');
+const ws = new WebSocket('ws:///192.168.58.28:8999');  // Enter your Lap IP Address IPv4 (change 192.168.58.28) 
 
 ws.addEventListener('open', (event) => {
     ws.send(JSON.stringify({

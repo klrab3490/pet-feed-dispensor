@@ -5,10 +5,10 @@
 
 #define CAMERA_MODEL_AI_THINKER
 
-const char* ssid = "Galaxy M111142";
-const char* password = "1234567890";
-const char* websocket_server_host = "192.168.58.28";
-const uint16_t websocket_server_port = 8885;
+const char* ssid = "Galaxy M111142"; // Enter your Wifi Name
+const char* password = "1234567890"; // Enter your Wifi Password
+const char* websocket_server_host = "192.168.58.28";  // Enter your Lap IP Address IPv4 (change 192.168.58.28)
+const uint16_t websocket_server_port = 8885; 
 
 using namespace websockets;
 WebsocketsClient client;
